@@ -17,7 +17,7 @@ var key = Encoding.UTF8.GetBytes(jwtConfig["Key"]);
 
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Airline API", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Airline Auth API", Version = "v1" });
 
     //JWT Auth configuration for Swagger UI
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

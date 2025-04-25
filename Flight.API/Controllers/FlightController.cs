@@ -10,5 +10,31 @@ namespace Flight.API.Controllers
     public class FlightController : ControllerBase
     {
 
+
+        [HttpGet]
+        public IActionResult GetAllFlights()
+        {
+            return Ok("Return all flights (admin only)");
+        }
+
+        [HttpPost]
+        public IActionResult AddFlight()
+        {
+            return Ok("Flight added successfully");
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateFlight(int id)
+        {
+            return Ok($"Flight {id} updated successfully");
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteFlight(int id)
+        {
+            return Ok($"Flight {id} deleted successfully");
+        }
+
+
     }
 }
